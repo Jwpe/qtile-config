@@ -42,7 +42,7 @@ command_keys = [
 
     # Switch window focus to other pane(s) of stack
     Key(
-        [mod], "space",
+        [mod], "Tab",
         lazy.layout.next()
     ),
 
@@ -62,7 +62,7 @@ command_keys = [
     ),
 
     # Toggle between different layouts as defined below
-    Key([mod], "Tab",    lazy.nextlayout()),
+    Key([mod], "space",    lazy.nextlayout()),
     Key([mod], "w",      lazy.window.kill()),
 
     Key([mod, "control"], "r", lazy.restart()),
@@ -75,6 +75,7 @@ command_keys = [
     Key([mod], "s", lazy.spawn("subl")),
     Key([mod], "x", lazy.spawn("xchat")),
     Key([mod], "h", lazy.spawn("hipchat")),
+    Key([mod], "m", lazy.spawn("spotify")),
 
     # Volume control
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),

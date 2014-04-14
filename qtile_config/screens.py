@@ -22,7 +22,7 @@ screens = [
                 widget.Systray(),
                 widget.Clock('%Y-%m-%d %a %I:%M %p', **widget_defaults),
             ],
-            20,
+            25,
         ),
     ),
     Screen(
@@ -31,8 +31,12 @@ screens = [
                 widget.GroupBox(**widget_defaults),
                 widget.Prompt(**widget_defaults),
                 widget.WindowName(**widget_defaults),
+                widget.TextBox("CPU:"),
+                widget.CPUGraph(samples=400, width=400),
+                widget.TextBox("RAM:"),
+                widget.MemoryGraph(samples=400, width=400),
             ],
-            20,
+            25,
         ),
     ),
 ]
