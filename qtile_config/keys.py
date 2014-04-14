@@ -80,6 +80,8 @@ command_keys = [
     # Volume control
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute"))
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute")),
 
+    # Screenshot
+    Key([mod], "Insert", lazy.spawn("sleep 0.2; scrot -e 'mv $f /home/jonathan/Pictures/screenshots' -s")),
 ]
