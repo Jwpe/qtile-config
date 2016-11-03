@@ -62,8 +62,8 @@ command_keys = [
     ),
 
     # Toggle between different layouts as defined below
-    Key([mod], "space",    lazy.nextlayout()),
-    Key([mod], "w",      lazy.window.kill()),
+    Key([mod], "space", lazy.next_layout()),
+    Key([mod], "w", lazy.window.kill()),
 
     Key([mod, "control"], "r", lazy.restart()),
     Key([mod], "Delete", lazy.shutdown()),
@@ -72,10 +72,12 @@ command_keys = [
     Key([mod], "r", lazy.spawncmd()),
     Key([mod], "Return", lazy.spawn("gnome-terminal")),
     Key([mod], "c", lazy.spawn("google-chrome")),
+    Key([mod], "v", lazy.spawn("/opt/google/chrome/google-chrome --profile-directory=Default --app-id=fhbjgbiflinjbdggehcddcbncdddomop")),
     Key([mod], "s", lazy.spawn("subl")),
     Key([mod], "x", lazy.spawn("xchat")),
     Key([mod], "h", lazy.spawn("hipchat")),
     Key([mod], "m", lazy.spawn("spotify")),
+    Key([mod], "g", lazy.spawn("gnome-control-center")),
 
     # Volume control
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),

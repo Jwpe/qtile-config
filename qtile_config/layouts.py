@@ -10,5 +10,6 @@ floating_layout = layout.Floating(
         "notification",
         "toolbar",
         "splash",
-        "dialog",],
-    float_rules = [dict(wmclass="spotify")])
+        "dialog"
+    ],
+    float_rules=[])
